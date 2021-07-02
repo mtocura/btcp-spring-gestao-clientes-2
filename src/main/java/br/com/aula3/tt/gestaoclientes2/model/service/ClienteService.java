@@ -65,7 +65,7 @@ public class ClienteService {
         Cliente cliente = clienteRepository.deleteCliente(id);
 
         if(cliente == null) return null;
-        
+
         return ClienteConverter.clienteEntityToDTO(cliente);
     }
 }
