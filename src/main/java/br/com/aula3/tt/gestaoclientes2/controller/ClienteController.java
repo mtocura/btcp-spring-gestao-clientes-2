@@ -41,7 +41,7 @@ public class ClienteController {
         return ResponseEntity.ok(pedidos);
     }
 
-    @GetMapping("/clientes/{dia}/{mes}/{ano}")
+    @GetMapping("/pedidos/{dia}/{mes}/{ano}")
     public ResponseEntity<?> getPedidosData(@PathVariable String dia, @PathVariable String mes, @PathVariable String ano) {
         List<PedidoDTO> pedidos = clienteService.getPedidosData(dia, mes, ano);
 
