@@ -20,6 +20,17 @@ public class ClienteConverter {
         );
     }
 
+    public static Cliente clienteFormToEntity(ClienteForm clienteForm, long id) {
+        return new Cliente(
+                id,
+                clienteForm.getNome(),
+                clienteForm.getCpf(),
+                clienteForm.getEmail(),
+                clienteForm.getTelefone(),
+                PedidoConverter.pedidoFormToEntity(clienteForm.getPedidos())
+        );
+    }
+
     public static List<Cliente> clienteFormToEntity(List<ClienteForm> clienteForms) {
         List<Cliente> clientes = new ArrayList<>();
 
